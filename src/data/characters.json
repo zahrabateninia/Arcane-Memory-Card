@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Vi",
+      "image": "/img/characters/vi.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Powder",
+      "image": "/img/characters/powder.webp"
+    },
+    {
+      "id": 3,
+      "name": "Caitlyn",
+      "image": "/img/characters/caitlyn.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Silco",
+        "image": "/img/characters/silco.webp"
+      },
+      {
+        "id": 5,
+        "name": "Mel",
+        "image": "/img/characters/Mel.webp"
+      },
+      {
+        "id": 6,
+        "name": "Maddie",
+        "image": "/img/characters/maddie.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Jayce",
+        "image": "/img/characters/jayce.webp"
+      },
+      {
+        "id": 8,
+        "name": "Isha",
+        "image": "/img/characters/Isha.webp"
+      },
+      {
+        "id": 9,
+        "name": "Ambessa",
+        "image": "/img/characters/Ambessa.webp"
+      },
+      {
+        "id": 10,
+        "name": "Ekko",
+        "image": "/img/characters/Ekko.webp"
+      }
+  ]
+  
