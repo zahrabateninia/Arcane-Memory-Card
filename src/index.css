@@ -5,6 +5,9 @@
   --pinkish-color: #993D48;
   --lightest-color: #F4E1D2;
   --blueish-color: #34515F;
+  --box-shadow: 0 0 36px 9px var(--lightest-color);
+
+  --font-primary: 'Silkscreen', sans-serif;
 }
 
 
@@ -12,6 +15,7 @@ body {
   background: url('./assets/img/boMel.webp') no-repeat center center fixed;
   background-size: cover;
   margin: 0;
+  font-family: var(--font-primary);
 
 }
 

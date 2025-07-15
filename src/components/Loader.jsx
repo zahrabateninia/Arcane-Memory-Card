@@ -5,7 +5,7 @@
  const Loader = () => {
    return (
     <div className="loader-container">
-      <CircleLoader color="#fff" size={120} />
+      <CircleLoader color="#F4E1D2" size={120} />
       <p>Loading...</p>
     </div>
    )

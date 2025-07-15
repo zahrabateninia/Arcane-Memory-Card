@@ -1,0 +1,51 @@
+.start-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 2rem;
+    font-family: 'Silkscreen', sans-serif;
+    color: var(--lightest-color);
+    text-align: center;
+  }
+
+  .start-page-card{
+    background-color: var(--pinkish-color);
+    border-radius: 4rem;
+    padding: 3rem;
+    margin: 2.5rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .start-page h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    color: var(--lightest-color);
+  }
+  
+  .difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .difficulty-buttons button {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-family: 'Silkscreen', sans-serif;
+    color: #fff;
+    background-color: var(--blueish-color);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .difficulty-buttons button:hover {
+    background-color: var(--lightest-color);
+    color: black;
+    transform: scale(1.05);
+  }
+  
