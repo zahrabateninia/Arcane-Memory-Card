@@ -16,6 +16,7 @@
     padding: 3rem;
     margin: 2.5rem;
     box-shadow: var(--box-shadow);
+    opacity: .9;
   }
   
   .start-page h1 {
