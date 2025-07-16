@@ -22,6 +22,22 @@ const CardGrid = ({difficulty, onGameOver }) => {
         setCharacters(characterData)
     },[]);
 
+    useEffect(()=>{
+        // run this effect after characters are set
+        if(characters.length > 0){
+            loadNewCards()
+        }
+    },[characters, load]);
+
+    const loadNewCards = () => {
+        // randomly sort the array
+        const shuffled = [...characters].sort(() => Math.random() - 0.5); 
+        const selected = shuffled.slice(0, cardsPerRound);
+        setCurrentCards(selected)
+    }
+
+
+
   return (
     <div>
       
