@@ -1,6 +1,7 @@
 // Render the grid of shuffled cards
 import React, { useState, useEffect } from 'react';
-import characterData from '../data/characters.json'
+import characterData from '../data/characters.json';
+import './CardGrid.css'
 
 
 const CardGrid = ({difficulty, onGameOver }) => {
@@ -36,6 +37,7 @@ const CardGrid = ({difficulty, onGameOver }) => {
         setCurrentCards(selected)
     }
 
+
     const handleCardClick = (id) => {
         if (clickedIds.has(id)) {
           onGameOver('lose');
@@ -47,17 +49,28 @@ const CardGrid = ({difficulty, onGameOver }) => {
           if (round === totalRounds) {
             onGameOver('win');
           } else {
-            // go to next round
-            setRound((prev) => prev + 1); 
+            setRound((prev) => prev + 1);
           }
         }
-
+      }
 
 
   return (
-    <div>
-      
-    </div>
+        <div className="card-grid">
+            <div className="cards-container">
+                {currentCards.map(card => (
+                <div
+                    key={card.id}
+                    className="card"
+                    onClick={() => handleCardClick(card.id)}
+                >
+                    <img src={card.image} alt={card.name} />
+                    <p>{card.name}</p>
+                </div>
+                ))}
+            </div>
+            <p>{round}/{totalRounds}</p>
+        </div>
   )
 }
 
