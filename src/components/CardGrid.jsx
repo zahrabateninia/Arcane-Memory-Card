@@ -12,7 +12,8 @@ const CardGrid = ({difficulty, onGameOver }) => {
         medium: {cardsPerRound: 4, totalRounds: 7},
         difficult: {cardsPerRound: 5, totalRounds: 10},
     }
-    const [cardsPerRound, totalRounds] = config(difficulty)
+    const { cardsPerRound, totalRounds } = config[difficulty];
+
 
     const [characters, setCharacters] = useState([]);
     const [currentCards, setCurrentCards] = useState([]);
