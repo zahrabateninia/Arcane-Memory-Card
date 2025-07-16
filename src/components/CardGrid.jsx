@@ -27,7 +27,7 @@ const CardGrid = ({difficulty, onGameOver }) => {
         if(characters.length > 0){
             loadNewCards()
         }
-    },[characters, load]);
+    },[characters, round]);
 
     const loadNewCards = () => {
         // randomly sort the array
@@ -35,6 +35,22 @@ const CardGrid = ({difficulty, onGameOver }) => {
         const selected = shuffled.slice(0, cardsPerRound);
         setCurrentCards(selected)
     }
+
+    const handleCardClick = (id) => {
+        if (clickedIds.has(id)) {
+          onGameOver('lose');
+        } else {
+          const updatedSet = new Set(clickedIds);
+          updatedSet.add(id);
+          setClickedIds(updatedSet);
+    
+          if (round === totalRounds) {
+            onGameOver('win');
+          } else {
+            // go to next round
+            setRound((prev) => prev + 1); 
+          }
+        }
 
 
 
