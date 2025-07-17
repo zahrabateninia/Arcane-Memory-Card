@@ -1,6 +1,6 @@
 // Render the grid of shuffled cards
 import React, { useState, useEffect } from 'react';
-import characterData from '../data/characters.json';
+import characterData from '../data/characters';
 import './CardGrid.css'
 
 

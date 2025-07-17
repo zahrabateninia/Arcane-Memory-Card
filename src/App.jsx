@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import LoadingPage from './pages/LoadingPage';
 import StartPage from './pages/StartPage';
 import PlayGamePage from './pages/PlayGamePage';
-import charactersData from './data/characters.json'; 
+import charactersData from './data/characters'; 
 
 const STAGES = { 
   LOADING: 'loading',
