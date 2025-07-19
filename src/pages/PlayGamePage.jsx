@@ -3,6 +3,7 @@ import CardGrid from '../components/CardGrid';
 import GameOver from '../components/GameOver';
 import characterData from '../data/characters';
 import ScoreBoard from '../components/ScoreBoard';
+import './PlayGamePage.css'
 
 const PlayGamePage = ({ difficulty, restartGame }) => {
   const [gameOver, setGameOver] = useState(false);

@@ -6,12 +6,12 @@
     height: 100vh;
     gap: 2rem;
     font-family: 'Silkscreen', sans-serif;
-    color: var(--lightest-color);
+    color: var(--primary-color);
     text-align: center;
   }
 
   .start-page-card{
-    background-color: var(--pinkish-color);
+    background-color: var(--primary-color);
     border-radius: 4rem;
     padding: 3rem;
     margin: 2.5rem;
@@ -20,9 +20,9 @@
   }
   
   .start-page h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 4rem;
-    color: var(--lightest-color);
+    color: var(--pinkish-color);
   }
   
   .difficulty-buttons {
