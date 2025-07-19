@@ -1,0 +1,40 @@
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: #222;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 160px;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card p {
+    text-align: center;
+    padding: 0.5rem;
+    font-family: 'Silkscreen', sans-serif;
+  }
+  

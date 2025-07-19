@@ -13,6 +13,8 @@
 }
 
 .loader-container p{
-  color: rgb(189, 182, 182);
-  font-size: 2rem;
+  color: var(--lightest-color);
+  font-size: 1.8rem;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
 }
