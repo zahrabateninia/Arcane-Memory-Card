@@ -1,11 +1,11 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --primary-color: #D49E7A;
-  --secondary-color: #3F3140;
-  --pinkish-color: #993D48;
-  --lightest-color: #F4E1D2;
-  --blueish-color: #34515F;
-  --box-shadow: 0 0 36px 9px var(--lightest-color);
+  --primary-color: #BB19A6;
+  --secondary-color: #4615C4;
+  --pinkish-color: #FCABFC;
+  --lightest-color: #FCABFC;
+  --blueish-color: #4BB3F8;
+  --box-shadow: 0 0 10px 5px var(--lightest-color);
 
   --font-primary: 'Silkscreen', sans-serif;
 }
@@ -22,7 +22,7 @@
 }
 
 body {
-  background: url('./assets/img/boMel.webp') no-repeat center center fixed;
+  background: url('./assets/img/jinx&vi.webp') no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   font-family: var(--font-primary);
