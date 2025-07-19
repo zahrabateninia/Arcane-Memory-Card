@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Card from './Card.jsx'
 import './CardGrid.css';
 
 const CardGrid = ({ difficulty, characters, round, setRound, onGameOver }) => {
@@ -44,12 +45,9 @@ const CardGrid = ({ difficulty, characters, round, setRound, onGameOver }) => {
   return (
     <div className="card-grid">
       <div className="cards-container">
-        {currentCards.map((card) => (
-          <div key={card.id} className="card" onClick={() => handleCardClick(card.id)}>
-            <img src={card.image} alt={card.name} />
-            <p>{card.name}</p>
-          </div>
-        ))}
+            {currentCards.map((card) => (
+            <Card key={card.id} character={card} onClick={() => handleCardClick(card.id)}  round={round}/>
+          ))}
       </div>
       <p>Round {round} of {totalRounds}</p>
     </div>

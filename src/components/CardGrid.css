@@ -15,12 +15,14 @@
   }
   
   .card {
-    background-color: #222;
+    background: url('../assets/img/boMel.webp') cover;
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    width: 160px;
+    width: 15rem;
     transition: transform 0.2s ease;
+    padding: 1rem;
+    padding-bottom: 2rem;
   }
   
   .card:hover {
