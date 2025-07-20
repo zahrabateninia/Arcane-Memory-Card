@@ -3,6 +3,7 @@ import LoadingPage from './pages/LoadingPage';
 import StartPage from './pages/StartPage';
 import PlayGamePage from './pages/PlayGamePage';
 import charactersData from './data/characters'; 
+import { AnimatePresence } from 'framer-motion';
 
 const STAGES = { 
   LOADING: 'loading',
@@ -36,11 +37,12 @@ function App() {
   const renderStage = () => {
     switch(stage){
       case STAGES.LOADING: 
-        return <LoadingPage />
+        return <LoadingPage key='loading' />
       case STAGES.START:
-        return <StartPage startGame={handleStartGame} />
+        return <StartPage  key='start' startGame={handleStartGame} />
       case STAGES.PLAY:
         return <PlayGamePage 
+                  key='play'
                   difficulty={difficulty} 
                   characters={characters}
                   restartGame={handleRestartGame}
@@ -51,9 +53,9 @@ function App() {
   }
 
   return (
-    <>
-      {renderStage()}
-    </>
+      <AnimatePresence mode="wait">
+          {renderStage()}
+      </AnimatePresence>
   );
 }
 
