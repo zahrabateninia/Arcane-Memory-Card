@@ -13,7 +13,7 @@ const GameOver = ({ didWin, onRestart }) => {
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <h2>{didWin ? 'You Win!' : 'You Lose!'}</h2>
-        <button className="restart-btn" onClick={onRestart}>
+        <button className="arcane-button restart-btn" onClick={onRestart}>
           Restart Game
         </button>
       </div>

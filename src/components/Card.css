@@ -33,7 +33,7 @@
   
   .card-front {
     transform: rotateY(180deg);
-    border: 1rem solid  #111;
+    border: 1rem solid  var(--arcane-purple);
   }
   
 .card-back img,

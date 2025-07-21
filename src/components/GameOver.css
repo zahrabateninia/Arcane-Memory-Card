@@ -35,20 +35,7 @@
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   }
   
-  .restart-btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: #ff006e;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .restart-btn:hover {
-    background-color: #d8005a;
-  }
+
   
   /* Hide original <img> */
   .game-over-image {

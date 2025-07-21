@@ -1,52 +1,44 @@
 .start-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    gap: 2rem;
-    font-family: 'Silkscreen', sans-serif;
-    color: var(--primary-color);
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2.5rem;
+  font-family: var(--font-family);
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.4); /* make background img darker */
+}
+/* logo style starts */
+.start-page .logo {
+  width: 21rem;
+  height: auto;
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 1));
+  transition: transform 0.2s ease-in-out;
+}
 
-  .start-page-card{
-    background-color: var(--primary-color);
-    border-radius: 4rem;
-    padding: 3rem;
-    margin: 2.5rem;
-    box-shadow: var(--box-shadow);
-    opacity: .9;
-  }
-  
-  .start-page h1 {
-    font-size: 3rem;
-    margin-bottom: 4rem;
-    color: var(--pinkish-color);
-  }
-  
-  .difficulty-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  
-  .difficulty-buttons button {
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    font-family: 'Silkscreen', sans-serif;
-    color: #fff;
-    background-color: var(--blueish-color);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-  }
-  
-  .difficulty-buttons button:hover {
-    background-color: var(--lightest-color);
-    color: black;
-    transform: scale(1.05);
-  }
-  
+.start-page .logo:hover {
+  transform: scale(1.05) rotate(-5deg);
+  filter: drop-shadow(3px 3px 1px var(--jinx-blue));
+}
+/* logo style ends */
+
+.game-title{
+  font-family: 'lacquer', sans-serif;
+  color: var(--vi-pink);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-shadow:  0px 10px 10px rgba(0,0,0,1);
+  margin-bottom: 3.5rem;
+}
+
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+
+

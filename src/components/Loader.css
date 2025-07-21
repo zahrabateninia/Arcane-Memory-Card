@@ -12,9 +12,4 @@
   z-index: 9999;             
 }
 
-.loader-container p{
-  color: var(--lightest-color);
-  font-size: 1.8rem;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-}
+
