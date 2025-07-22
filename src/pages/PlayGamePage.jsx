@@ -42,8 +42,10 @@ const PlayGamePage = ({ difficulty, restartGame }) => {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5 }}
           >
-            <img src={logo} alt="Arcane Logo" className='page-logo' />
-            <ScoreBoard score={round - 1} bestScore={bestScore} />
+            <header className='game-header'>
+              <img src={logo} alt="Arcane Logo" className='page-logo' />
+              <ScoreBoard score={round - 1} bestScore={bestScore} />
+            </header>
             <CardGrid
               difficulty={difficulty}
               characters={characterData}

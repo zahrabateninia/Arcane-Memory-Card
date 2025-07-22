@@ -1,7 +1,4 @@
 .score-board{
-    position: fixed;
-    top: 0;
-    right: 0;
     background-color: var(--arcane-purple);
     color: white;
     font-weight: bold;
@@ -12,4 +9,10 @@
     font-size: 1.2rem;
     box-shadow: var(--box-shadow);
 
+}
+
+
+.score-board {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
 }
