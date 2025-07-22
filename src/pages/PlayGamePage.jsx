@@ -5,6 +5,7 @@ import characterData from '../data/characters';
 import ScoreBoard from '../components/ScoreBoard';
 import './PlayGamePage.css';
 import { AnimatePresence, motion } from 'framer-motion';
+import logo from '../assets/img/logo.png'
 
 const PlayGamePage = ({ difficulty, restartGame }) => {
   const [gameOver, setGameOver] = useState(false);
@@ -41,6 +42,7 @@ const PlayGamePage = ({ difficulty, restartGame }) => {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5 }}
           >
+            <img src={logo} alt="Arcane Logo" className='page-logo' />
             <ScoreBoard score={round - 1} bestScore={bestScore} />
             <CardGrid
               difficulty={difficulty}

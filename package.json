@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/bebas-neue": "^5.2.6",
+    "@fontsource/lacquer": "^5.2.6",
     "@fontsource/silkscreen": "^5.2.6",
     "framer-motion": "^12.23.3",
     "react": "^19.1.0",

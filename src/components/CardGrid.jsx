@@ -49,7 +49,7 @@ const CardGrid = ({ difficulty, characters, round, setRound, onGameOver }) => {
             <Card key={card.id} character={card} onClick={() => handleCardClick(card.id)}  round={round}/>
           ))}
       </div>
-      <p>Round {round} of {totalRounds}</p>
+      <p className='round-counter'>Round {round} of {totalRounds}</p>
     </div>
   );
 };

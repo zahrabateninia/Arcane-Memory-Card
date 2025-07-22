@@ -5,3 +5,18 @@
     align-items: center;
     justify-content: center;
 }
+
+.page-logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 9rem;
+    height: auto;
+    filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.4));
+    transition: transform 0.2s ease-in-out;
+}
+
+.page-logo:hover {
+    transform: scale(1.05) rotate(-5deg);
+    filter: drop-shadow(3px 3px 1px var(--jinx-blue));
+  }

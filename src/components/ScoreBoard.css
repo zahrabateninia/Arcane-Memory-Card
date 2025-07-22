@@ -2,11 +2,13 @@
     position: fixed;
     top: 0;
     right: 0;
-    background-color: var(--primary-color);
+    background-color: var(--arcane-purple);
+    color: white;
+    font-weight: bold;
     margin: 2rem;
     padding: 1.5rem;
     border-radius: 1rem;
-    color: white;
+    border: none;
     font-size: 1.2rem;
     box-shadow: var(--box-shadow);
 
