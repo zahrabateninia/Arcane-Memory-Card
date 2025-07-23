@@ -5,6 +5,11 @@
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
+.tilt-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
 
 .character-holder {
   position: relative;
