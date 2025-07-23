@@ -30,8 +30,7 @@ function App() {
   };
 
   const handleRestartGame = () => {
-    setDifficulty(null);
-    setStage(STAGES.START);
+    setStage(STAGES.PLAY);
   };
 
   const renderStage = () => {
