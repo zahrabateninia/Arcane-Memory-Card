@@ -21,6 +21,7 @@
   text-decoration: none;
   text-transform: capitalize;
   line-height: 1.5;
+  
 }
 
 body {
@@ -28,7 +29,6 @@ body {
   background-size: cover;
   margin: 0;
   font-family: var(--font-primary);
-
 }
 
 /* Arcane Glitch Button Style */
@@ -46,7 +46,7 @@ body {
   outline: transparent;
   position: relative;
   user-select: none;
-  border-radius: 3px;
+  border-radius: 3px;  
 }
 
 .arcane-button:after {

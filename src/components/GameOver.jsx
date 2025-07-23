@@ -12,7 +12,7 @@ const GameOver = ({ didWin, onRestart }) => {
         className="game-over-dialog"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <h2>{didWin ? 'You Win!' : 'You Lose!'}</h2>
+        <h2 className='game-over-message'>{didWin ? 'You Won!' : 'You Lost!'}</h2>
         <button className="arcane-button restart-btn" onClick={onRestart}>
           Restart Game
         </button>
