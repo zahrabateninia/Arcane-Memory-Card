@@ -1,5 +1,3 @@
-/* ========== Base Card Styles ========== */
-
 .card-wrapper {
   perspective: 1000px;
   width: 15rem;
@@ -14,6 +12,7 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.6s;
+ 
 }
 
 .card-wrapper.flipped .character-holder {
@@ -32,16 +31,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: var(--box-shadow);
 }
 
 /* Flip the front */
 .card-front {
   transform: rotateY(180deg);
-  border: 0.6rem solid var(--arcane-purple);
-  background-color: var(--arcane-purple);
+  /* border: 0.6rem solid var(--arcane-purple); */
+  background: var(--purplish-gradient);
 }
 
-/* Common image styles */
 .card-back img,
 .card-front img {
   width: 100%;

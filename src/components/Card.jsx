@@ -1,30 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import './Card.css';
-import cardBack from '../assets/img/backCard.webp'; 
-import flipSound from '../assets/audio/flipcard.mp3';
+import cardBack from '../assets/img/backCard.webp';
 
-const Card = ({ character, onClick, round }) => {
-  const [flipped, setFlipped] = useState(false);
-
-  useEffect(() => {
-    setFlipped(false);
-    const timer = setTimeout(() => {
-      setFlipped(true);
-      
-      const audio = new Audio(flipSound);
-      audio.volume = 0.5; // prevent it from being too loud
-      audio.play().catch((e) => {
-        console.warn("Audio play interrupted:", e);
-      });
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [round]);
-
+const Card = ({ character, onClick, shouldFlip }) => {
   return (
     <motion.div
-      className={`card-wrapper ${flipped ? 'flipped' : ''}`}
+      className={`card-wrapper ${shouldFlip ? 'flipped' : ''}`}
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
     >
