@@ -7,7 +7,7 @@ import './PlayGamePage.css';
 import { AnimatePresence, motion } from 'framer-motion';
 import logo from '../assets/img/logo.png'
 
-const PlayGamePage = ({ difficulty, restartGame }) => {
+const PlayGamePage = ({ difficulty, restartGame , backToStart}) => {
   const [gameOver, setGameOver] = useState(false);
   const [didWin, setDidWin] = useState(false);
   const [round, setRound] = useState(1);
@@ -43,8 +43,14 @@ const PlayGamePage = ({ difficulty, restartGame }) => {
             transition={{ duration: 0.5 }}
           >
             <header className='game-header'>
-              <img src={logo} alt="Arcane Logo" className='page-logo' />
-              <ScoreBoard score={round - 1} bestScore={bestScore} />
+                <img
+                  src={logo}
+                  alt="Arcane Logo"
+                  className='page-logo'
+                  onClick={backToStart} // navigates to start page with reset state
+                  title="Go to Start Page"
+                />
+                <ScoreBoard score={round - 1} bestScore={bestScore} />
             </header>
             <CardGrid
               difficulty={difficulty}

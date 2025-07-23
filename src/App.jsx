@@ -33,6 +33,10 @@ function App() {
     setStage(STAGES.PLAY);
   };
 
+  const handleStartOver = () =>{
+    setStage(STAGES.START)
+  }
+
   const renderStage = () => {
     switch(stage){
       case STAGES.LOADING: 
@@ -45,6 +49,7 @@ function App() {
                   difficulty={difficulty} 
                   characters={characters}
                   restartGame={handleRestartGame}
+                  backToStart={handleStartOver}
                />
       default:
         return null;
