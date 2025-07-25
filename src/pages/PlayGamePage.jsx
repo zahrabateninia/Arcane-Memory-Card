@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import CardGrid from '../components/CardGrid';
 import GameOver from '../components/GameOver';
 import characterData from '../data/characters';
@@ -26,8 +26,8 @@ const PlayGamePage = ({ difficulty, restartGame , backToStart}) => {
   const handleRestart = () => {
     setGameOver(false);
     setDidWin(false);
-    setRound(1); // reset round
-    restartGame(); // back to StartPage
+    setRound(1); 
+    restartGame(); 
   };
 
   

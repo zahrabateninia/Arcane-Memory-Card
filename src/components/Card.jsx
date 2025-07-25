@@ -1,13 +1,15 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import './Card.css';
 import cardBack from '../assets/img/backCard.webp';
 
-const Card = ({ character, onClick, shouldFlip }) => {
+const Card = ({ character, onClick, isFlipped }) => {
+
   return (
     <motion.div
-      className={`card-wrapper ${shouldFlip ? 'flipped' : ''}`}
+      className={`card-wrapper ${isFlipped ? 'flipped' : ''}`}
       onClick={onClick}
     >
       <Tilt
