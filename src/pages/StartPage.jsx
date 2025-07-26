@@ -1,11 +1,10 @@
-import {React, useState } from 'react';
+import React from 'react';
 import './StartPage.css';
 import logo from '../assets/img/logo.png';
 import { motion } from 'framer-motion';
-import AudioToggleButton from '../components/AudioToggleButton'; 
  
 
-const StartPage = ({ startGame, isMuted, toggleMute }) => {
+const StartPage = ({ startGame }) => {
   return (
     <div className="start-page">
       <motion.div
@@ -40,7 +39,6 @@ const StartPage = ({ startGame, isMuted, toggleMute }) => {
             Difficult
           </button>
         </div>
-        <AudioToggleButton isMuted={isMuted} toggleMute={toggleMute} />
       </motion.div>
     </div>
   );
