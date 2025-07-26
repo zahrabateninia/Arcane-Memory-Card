@@ -45,40 +45,45 @@ function App() {
     switch(stage) {
       case STAGES.LOADING: 
         return <LoadingPage key="loading" />;
+
       case STAGES.START:
         return (
-          <StartPage  
-            key="start"
-            startGame={handleStartGame}
-            isMuted={isMuted}
-            toggleMute={toggleMute}
-          />
+          <>
+            <StartPage  
+              key="start"
+              startGame={handleStartGame}
+              isMuted={isMuted}
+              toggleMute={toggleMute}
+            />
+            <AudioToggleButton isMuted={isMuted} toggleMute={toggleMute} />
+          </>
         );
+
       case STAGES.PLAY:
         return (
-          <PlayGamePage 
-            key="play"
-            difficulty={difficulty}
-            characters={characters}
-            restartGame={handleRestartGame}
-            backToStart={handleStartOver}
-            isMuted={isMuted}
-            toggleMute={toggleMute}
-          />
+          <>
+            <PlayGamePage 
+              key="play"
+              difficulty={difficulty}
+              characters={characters}
+              restartGame={handleRestartGame}
+              backToStart={handleStartOver}
+              isMuted={isMuted}
+              toggleMute={toggleMute}
+            />
+            <AudioToggleButton isMuted={isMuted} toggleMute={toggleMute} />
+          </>
         );
+
       default:
         return null;
     }
   };
 
   return (
-    <>
-      <AudioToggleButton isMuted={isMuted} toggleMute={toggleMute} />
-      
-      <AnimatePresence mode="wait">
-        {renderStage()}
-      </AnimatePresence>
-    </>
+    <AnimatePresence mode="wait">
+      {renderStage()}
+    </AnimatePresence>
   );
 }
 

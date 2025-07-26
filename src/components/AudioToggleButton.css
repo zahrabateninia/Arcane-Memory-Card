@@ -14,6 +14,17 @@
     height: 2.3rem;
     background-color: var(--vi-pink);
     border-radius: 50%;
-    padding: .5rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: 
+      background-color 0.3s ease,
+      transform 0.2s ease,
+      box-shadow 0.3s ease;
+  }
+  
+  .audio-toggle img:hover {
+    background-color: var(--jinx-blue);
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
   }
   
