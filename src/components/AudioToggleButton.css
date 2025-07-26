@@ -1,0 +1,19 @@
+.audio-toggle {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .audio-toggle img {
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: var(--vi-pink);
+    border-radius: 50%;
+    padding: .5rem;
+  }
+  

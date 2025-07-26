@@ -15,6 +15,8 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [stage, setStage] = useState(STAGES.LOADING);
   const [difficulty, setDifficulty] = useState(null);
+  const [isMuted, setIsMuted] = useState(false);
+  const toggleMute = () => setIsMuted(prev => !prev);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -42,7 +44,12 @@ function App() {
       case STAGES.LOADING: 
         return <LoadingPage key='loading' />
       case STAGES.START:
-        return <StartPage  key='start' startGame={handleStartGame} />
+        return <StartPage  
+          key='start' 
+          startGame={handleStartGame}
+          isMuted={isMuted} 
+          toggleMute={toggleMute}
+          />
       case STAGES.PLAY:
         return <PlayGamePage 
                   key='play'
@@ -50,6 +57,9 @@ function App() {
                   characters={characters}
                   restartGame={handleRestartGame}
                   backToStart={handleStartOver}
+                  isMuted={isMuted}
+                  toggleMute={toggleMute}
+      
                />
       default:
         return null;

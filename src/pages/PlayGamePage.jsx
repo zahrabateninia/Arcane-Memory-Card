@@ -6,12 +6,15 @@ import ScoreBoard from '../components/ScoreBoard';
 import './PlayGamePage.css';
 import { AnimatePresence, motion } from 'framer-motion';
 import logo from '../assets/img/logo.png'
+import AudioToggleButton from '../components/AudioToggleButton';
 
-const PlayGamePage = ({ difficulty, restartGame , backToStart}) => {
+
+const PlayGamePage = ({ difficulty, restartGame , backToStart, isMuted, toggleMute}) => {
   const [gameOver, setGameOver] = useState(false);
   const [didWin, setDidWin] = useState(false);
   const [round, setRound] = useState(1);
   const [bestScore, setBestScore] = useState(0);
+
 
   const handleGameOver = (result) => {
     setDidWin(result === 'win');
@@ -58,7 +61,9 @@ const PlayGamePage = ({ difficulty, restartGame , backToStart}) => {
               round={round}
               setRound={setRound}
               onGameOver={handleGameOver}
+              isMuted={isMuted}
             />
+            <AudioToggleButton isMuted={isMuted} toggleMute={toggleMute} />
           </motion.div>
         )}
 

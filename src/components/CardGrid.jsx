@@ -5,7 +5,7 @@ import flipSound from '../assets/audio/flipcard.mp3';
 import uniqid from 'uniqid';
 
 
-const CardGrid = ({ difficulty, characters, round, setRound, onGameOver }) => {
+const CardGrid = ({ difficulty, characters, round, setRound, onGameOver, isMuted }) => {
   const config = {
     easy: { cardsPerRound: 3, totalRounds: 5 },
     medium: { cardsPerRound: 4, totalRounds: 7 },
@@ -32,9 +32,11 @@ const CardGrid = ({ difficulty, characters, round, setRound, onGameOver }) => {
     // 2. Then trigger flip on next frame
     const timer = setTimeout(() => {
       setIsFlipped(true);
-      const audio = new Audio(flipSound);
-      audio.volume = 0.5;
-      audio.play().catch(e => console.warn("Flip audio error:", e));
+      if (!isMuted) {
+        const audio = new Audio(flipSound);
+        audio.volume = 0.5;
+        audio.play().catch(e => console.warn("Audio error:", e));
+      }
     }, 50); // Keep delay small for layout to settle
   
     return () => clearTimeout(timer); // Clean up on rerender
