@@ -1,12 +1,43 @@
-# React + Vite
+# 💖 The Arcane Memory Game 💙
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live demo: [https://the-arcane-memory-game.netlify.app/](https://the-arcane-memory-game.netlify.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+The Arcane Memory Game is a React-based memory card game featuring multiple difficulty levels, smooth animations, and an engaging user experience. The project demonstrates clean architecture with modular components and modern React techniques.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- **Framer Motion Animations**: Utilizes the Framer Motion library, including the `Tilt` effect for dynamic and interactive card flipping animations.
+- **Conditional Rendering**: Implements conditional rendering to switch seamlessly between different app states and pages.
+- **Multiple Pages**:
+  - **Loading Page**: Displays a loading animation before the game starts.
+  - **Start Page**: Allows users to select the difficulty level before beginning the game.
+  - **Game Page**: The main gameplay screen where users play the memory card game.
+- **Difficulty Levels**: Supports different difficulty settings that affect the number of cards and gameplay complexity.
+- **Audio Controls**: Includes flip sound effects with a toggle button to mute/unmute the audio, available on both Start and Game pages.
+- **Responsive Design**: Fully responsive layout that adapts smoothly to different screen sizes and devices.
+- **Clean and Modular Code**: Well-structured React components with separation of concerns and reusable logic.
+
+---
+
+## Technologies Used
+
+- React
+- Framer Motion
+- CSS Modules / Styled Components (or your preferred styling solution)
+- JavaScript (ES6+)
+
+---
+
+## How to Run
+
+1. Clone the repository.
+2. Install dependencies with `npm install` or `yarn install`.
+3. Run the development server with `npm start` or `yarn start`.
+4. Open [http://localhost:3000](http://localhost:3000) to play the game locally.
+
