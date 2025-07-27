@@ -12,14 +12,15 @@
 }
 
 .character-holder {
-  position: relative;
   width: 100%;
   height: 100%;
+  position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.5s ease-in-out; /* Consistent timing for all */
+  transition: transform 0.7s ease-in-out;
 }
 
-.card-wrapper.flipped .character-holder {
+
+.character-holder.flipped {
   transform: rotateY(180deg);
 }
 
@@ -31,17 +32,15 @@
   backface-visibility: hidden;
   border-radius: 1rem;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   box-shadow: var(--box-shadow);
 }
 
-/* Flip the front */
 .card-front {
-  transform: rotateY(180deg);
-  background: var(--purplish-gradient);
+  transform: rotateY(180deg); 
+}
+
+.card-back {
+  background: var(--card-back-bg, #2d2d2d); 
 }
 
 .card-back img,
@@ -67,6 +66,7 @@
   font-weight: 600;
   border-radius: 0 0 1rem 1rem;
 }
+
 
 /* Responsive sizes */
 @media (max-width: 1380px) {

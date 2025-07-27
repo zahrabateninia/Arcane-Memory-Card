@@ -20,7 +20,7 @@ const CardGrid = ({ difficulty, characters, round, setRound, onGameOver, isMuted
   useEffect(() => {
     if (characters.length === 0) return;
   
-    // 1. Set the new cards
+    // Set the new cards
     const shuffled = [...characters].sort(() => Math.random() - 0.5);
     const selected = shuffled.slice(0, cardsPerRound).map(card => ({
       ...card,
@@ -29,7 +29,7 @@ const CardGrid = ({ difficulty, characters, round, setRound, onGameOver, isMuted
     setCurrentCards(selected);
     setIsFlipped(false); // Reset before flipping
   
-    // 2. Then trigger flip on next frame
+    // trigger flip on next frame
     const timer = setTimeout(() => {
       setIsFlipped(true);
       if (!isMuted) {
@@ -37,9 +37,9 @@ const CardGrid = ({ difficulty, characters, round, setRound, onGameOver, isMuted
         audio.volume = 0.5;
         audio.play().catch(e => console.warn("Audio error:", e));
       }
-    }, 50); // Keep delay small for layout to settle
+    }, 700); 
   
-    return () => clearTimeout(timer); // Clean up on rerender
+    return () => clearTimeout(timer); 
   }, [round]);
   
 
